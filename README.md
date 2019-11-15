@@ -10,7 +10,7 @@ The following is a checklist that counts as a minimum requirements to call your 
 - [ ] A description of how the adoption process is done should be displayed
 - [ ] Must display at least 3-5 pet images
 - [ ] Must display all the required information for all 3-5 pets
-- [ ] Must use the required data structures and algorithm. At a minimum, they must have a Queue data structure for pets and a - [ ] Queue data structure for people who are adopting
+- [ ] Must use the required data structures and algorithm. At a minimum, they must have a Queue data structure for pets and a Queue data structure for people who are adopting
 - [ ] *Can't* use an array as a Queue. Must use a linked list (singly or doubly) implementation of a Queue with the correct enqueue and dequeue methods (can't use push, shift, pop, unshift etc...)
 - [ ] Must pay attention to content, clarity, and readability
 - [ ] Must submit repo using the submission mechanism in the curriculum
