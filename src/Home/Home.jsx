@@ -1,13 +1,15 @@
 import React from 'react'
+import './Home.css'
 
 function Home() {
   return (
     <header>
-      <h1>About Petful</h1>
       <img
+        className='Home__hero'
         src="https://images.pexels.com/photos/46024/pexels-photo-46024.jpeg?auto=compress&cs=tinysrgb&h=750&w=1260"
         alt="cat and dog snuggle in grass"
       />
+      <h2>About Petful</h2>
       <p>
         Petful was made to help connect folks with all pets in need. Too often
         shelter pets can be neglected because of their breed. When you use

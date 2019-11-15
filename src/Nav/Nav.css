@@ -1,0 +1,9 @@
+.Nav__list {
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.Nav__list > a {
+  color: white;
+  font-size: 24px;
+}
