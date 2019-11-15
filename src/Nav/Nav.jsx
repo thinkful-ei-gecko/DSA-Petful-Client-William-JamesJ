@@ -5,8 +5,8 @@ import { Link } from 'react-router-dom'
 function Nav() {
   return(
   <ul className='Nav__list'>
-    <Link to="/">Home</Link>
-    <Link to="/adopt">Adopt</Link>
+    <li><Link to="/">Home</Link></li>
+    <li><Link to="/adopt">Adopt</Link></li>
   </ul>
   )
 }
