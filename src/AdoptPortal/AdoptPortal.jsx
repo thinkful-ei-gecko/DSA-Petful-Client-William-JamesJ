@@ -3,21 +3,26 @@ import './AdoptPortal.css'
 import PetCard from '../PetCard/PetCard'
 
 function AdoptPortal(props) {
-
-  const dogs = props.data.dogs.map(dog => <PetCard animal={dog} isValidated={props.data.isValidated}/>)
-  const cats = props.data.cats.map(cat => <PetCard animal={cat} isValidated={props.data.isValidated}/>)
-  const persons = props.data.persons.map(person => <li>{person.name}</li>)
+  const dogs = props.data.dogs.map(dog => (
+    <PetCard animal={dog} isValidated={props.data.isValidated} />
+  ))
+  const cats = props.data.cats.map(cat => (
+    <PetCard animal={cat} isValidated={props.data.isValidated} />
+  ))
 
   function validateAdopter(e) {
     e.preventDefault()
     const adopter = e.target.adopter.value
     const password = e.target.password.value
-  
+
     if (
       props.data.persons[0].name === adopter &&
       props.data.persons[0].password === password
     ) {
-      props.validateAdopter()
+      props.validateAdopter(true, { name: adopter })
+    } else {
+      props.validateAdopter(false, { name: adopter })
+      props.checkQueueNumber(adopter)
     }
   }
 
@@ -37,9 +42,10 @@ function AdoptPortal(props) {
         </label>
         <button>Get In Line</button>
       </form>
-      <p>Adopter Queue:</p>
-      <ul> {persons}</ul>
-
+      {props.data.isValidated && <p>Your turn to adopt!</p>}
+      {props.data.adopter.position > 0 && (
+        <p>You are currently #{props.data.adopter.position + 1} in line to adopt!</p>
+      )}
       <div className="AdoptPortal__pet-cards">
         {dogs}
         {cats}
