@@ -11,7 +11,7 @@ function PetCard(props) {
         <li>{props.animal.breed}</li>
       </ul>
       <p>{props.animal.story}</p>
-      <button disabled={!props.isValidated}>Adopt Me!</button>
+      <button disabled={!props.isValidated} onClick={() => {props.handleAdoption(props.animal.animalType)}}>Adopt Me!</button>
     </>
   )
 }

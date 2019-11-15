@@ -4,10 +4,10 @@ import PetCard from '../PetCard/PetCard'
 
 function AdoptPortal(props) {
   const dogs = props.data.dogs.map(dog => (
-    <PetCard animal={dog} isValidated={props.data.isValidated} />
+    <PetCard animal={dog} isValidated={props.data.isValidated} handleAdoption={props.handleAdoption}/>
   ))
   const cats = props.data.cats.map(cat => (
-    <PetCard animal={cat} isValidated={props.data.isValidated} />
+    <PetCard animal={cat} isValidated={props.data.isValidated} handleAdoption={props.handleAdoption}/>
   ))
 
   function validateAdopter(e) {
