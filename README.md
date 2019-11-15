@@ -1,24 +1,19 @@
-# DSA-Petful-Client-William-JamesJ
+# Petful
+## Authors: William Bae & James Jenkins
 
-## Full Stack DSA: Checklist for Petful project
-The following is a checklist that counts as a minimum requirements to call your petful project complete.
+- Live app: https://dsa-petful-client-william-jamesj.jamesjenkinsjr.now.sh/
+- Live api: https://petful-server-william-jamesj.herokuapp.com/api
+- API Repository: https://github.com/thinkful-ei-gecko/DSA-Petful-William-JamesJ
 
-- [ ] Petful app must be deployed (must have a live url for client and server)
-- [ ] Must have a client and a server
-- [ ] Must use the template provided with the project requirement (can’t use a previous project template)
-- [ ] The project should have a minimum of two pages, a landing page and an adoption page
-- [ ] A description of how the adoption process is done should be displayed
-- [ ] Must display at least 3-5 pet images
-- [ ] Must display all the required information for all 3-5 pets
-- [ ] Must use the required data structures and algorithm. At a minimum, they must have a Queue data structure for pets and a Queue data structure for people who are adopting
-- [ ] *Can't* use an array as a Queue. Must use a linked list (singly or doubly) implementation of a Queue with the correct enqueue and dequeue methods (can't use push, shift, pop, unshift etc...)
-- [ ] Must pay attention to content, clarity, and readability
-- [ ] Must submit repo using the submission mechanism in the curriculum
-- [ ] GitHub README must have:
-  - The name of the app
-  - Link to live app
-  - Link to client repo
-  - Link to API repo
-  - Name of your pair
-  - A summary section. This should have a concise explanation of what the petful project does.
-  - A section on the technology used.
+## Summary
+
+Petful is an app designed to match pets with their forever homes. Users simply access the adoption portal, confirm their registration information (name and password) and are prompted where they are in line, or if they are now eligible to adopt the next pet! Once a user's turn arrives, simply choose from among the available pets and that's it - you will be giving a loving companion its forever home.
+
+### Test adopter information: 
+  - Name: William
+  - Password: password1
+
+## Technologies
+- ReactJS
+- HTML5
+- CSS3
