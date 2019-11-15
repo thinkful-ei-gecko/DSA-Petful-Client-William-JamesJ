@@ -1,0 +1,49 @@
+.PetCard__container {
+  display: inline-block;
+  width: 40%;
+  border: 2.5px solid black;
+  border-radius: 20px;
+  margin-top: 5%;
+  text-align: center;
+  background-color: #FF9B42;
+}
+
+.PetCard__name {
+  font-size: 36px;
+}
+
+.PetCard__info {
+  list-style: none;
+  padding: 0;
+}
+
+.PetCard__li {
+  font-size: 18px;
+}
+
+.PetCard__bold {
+  font-weight: bold;
+}
+
+.PetCard__button {
+  background-color: #ADF7B6;
+  color: white;
+  border: 2px solid rgb(0, 133, 0);
+  border-radius: 30px;
+  font-size: 20px;
+  font-weight: bold;
+  padding: 10px;
+  margin-top: 2.5%;
+  margin-bottom: 2.5%;
+  transition-duration: 0.4s;
+}
+
+.PetCard__button:hover {
+  background-color: white;
+  color: #ADF7B6;
+}
+
+.PetCard__picture {
+  width: 90%;
+  object-fit: cover;
+}

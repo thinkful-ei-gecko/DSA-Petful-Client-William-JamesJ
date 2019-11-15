@@ -32,6 +32,7 @@ function AdoptPortal(props) {
         className="AdoptPortal__line-form"
         onSubmit={e => validateAdopter(e)}
       >
+        <div className='AdoptPortal__label-input'>
         <label htmlFor="adopter">
           Enter Your Name
           <input type="text" name="adopter" id="adopter" />
@@ -40,7 +41,8 @@ function AdoptPortal(props) {
           Enter Your Password
           <input type="password" name="password" id="password" />
         </label>
-        <button>Get In Line</button>
+        </div>
+        <button className="AdoptPortal__button">Get In Line</button>
       </form>
       {props.data.isValidated && <p>Your turn to adopt!</p>}
       {props.data.adopter.position > 0 && (
