@@ -1,0 +1,9 @@
+.AdoptPortal__pet-cards {
+  display: flex;
+  flex-direction: column;
+}
+
+.AdoptPortal__line-form {
+  display: flex;
+  justify-content: space-evenly;
+}

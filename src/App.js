@@ -13,6 +13,7 @@ class App extends React.Component {
       dogs: [],
       cats: [],
       persons: [],
+      isValidated: false
     }
   }
   componentDidMount() {
@@ -37,6 +38,12 @@ class App extends React.Component {
     })
     .then(person => this.setState({persons: [...this.state.persons, person]}))
   }
+
+  validateAdopter = () => {
+    this.setState({
+      isValidated: true
+    })
+  }
   render() {
     return (
       <div className="App">
@@ -45,7 +52,7 @@ class App extends React.Component {
         <Nav />
         <Route exact path="/" component={Home} />
         <Route exact path="/adopt" render={() => (
-          <AdoptPortal data={this.state}/>
+          <AdoptPortal data={this.state} validateAdopter={this.validateAdopter}/>
         )} />
       </div>
     )
