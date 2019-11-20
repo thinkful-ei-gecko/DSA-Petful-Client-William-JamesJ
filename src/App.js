@@ -18,8 +18,7 @@ class App extends React.Component {
     };
   }
   componentDidMount() {
-    console.log(config.REACT_APP_API_BASE);
-    console.log(process.env.NODE_ENV);
+    
     fetch(`${config.REACT_APP_API_BASE}/dogs`)
       .then(res => {
         if (res.ok) {
@@ -71,7 +70,7 @@ class App extends React.Component {
         this.setState({
           adopter: {
             ...this.state.adopter,
-            position: num
+            position: !!num ? num : -1
           }
         });
       });

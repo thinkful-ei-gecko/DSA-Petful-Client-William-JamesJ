@@ -3,11 +3,11 @@ import './AdoptPortal.css'
 import PetCard from '../PetCard/PetCard'
 
 function AdoptPortal(props) {
-  const dogs = props.data.dogs.map(dog => (
-    <PetCard animal={dog} isValidated={props.data.isValidated} handleAdoption={props.handleAdoption}/>
+  const dogs = props.data.dogs.map((dog, i) => (
+    <PetCard key={dog.name} animal={dog} isValidated={props.data.isValidated} handleAdoption={props.handleAdoption}/>
   ))
-  const cats = props.data.cats.map(cat => (
-    <PetCard animal={cat} isValidated={props.data.isValidated} handleAdoption={props.handleAdoption}/>
+  const cats = props.data.cats.map((cat, i) => (
+    <PetCard key={cat.name} animal={cat} isValidated={props.data.isValidated} handleAdoption={props.handleAdoption}/>
   ))
 
   function validateAdopter(e) {
@@ -42,11 +42,14 @@ function AdoptPortal(props) {
           <input type="password" name="password" id="password" />
         </label>
         </div>
-        <button className="AdoptPortal__button">Get In Line</button>
+        <button className="AdoptPortal__button">Check Your Spot</button>
       </form>
       {props.data.isValidated && <p>Your turn to adopt!</p>}
       {props.data.adopter.position > 0 && (
         <p>You are currently #{props.data.adopter.position + 1} in line to adopt!</p>
+      )}
+      {props.data.adopter.position === -1 && (
+        <p>You are not registered! Please contact us to get in line!</p>
       )}
       <div className="AdoptPortal__pet-cards">
         {dogs}
