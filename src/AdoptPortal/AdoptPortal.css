@@ -4,6 +4,35 @@
   justify-content: space-around;
 }
 
+.AdoptPortal__person-queue {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  border: 3px solid black;
+  background-color: green;
+  border-radius: 15px;
+}
+
+.AdoptPortal__person-queue > h3 {
+  width: 100%;
+  margin: 0;
+}
+
+.AdoptPortal__person-queue > ul {
+  padding: 0;
+  width: 100%;
+  display: flex;
+  overflow: ellipsis;
+  justify-content: center;
+  list-style-type: none;
+}
+
+.AdoptPortal__person-queue > ul > li {
+  margin: 0 3%;
+}
+
 .AdoptPortal__line-form {
   text-align: center;
   margin-top: 3%;
